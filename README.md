@@ -1,2 +1,2 @@
 # csd-402
-Java for Programmers class
+Java for Programmers
