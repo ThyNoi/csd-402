@@ -1,3 +1,8 @@
+/*
+    Eric Sengvanhpheng
+    August 20, 2026
+    CSD 402 Module 2.
+*/
 
 import java.util.Scanner; // for input
 
@@ -23,11 +28,18 @@ public class RockPaperScissors {
             System.out.println("It's a tie!");
         }
 
-        else if (userChoice == ROCK && computerChoice == SCISSORS) {
+        else if (userChoice == 1 && computerChoice == 3) {
             System.out.println("You win!");
+        }
+        else if (userChoice == 2 && computerChoice == 1) {
+            System.out.println("You");
+        }
+        else if (userChoice == 3 && computerChoice == 2) {
+            System.out.println("You");
+        }
+        else {
+            System.out.println("You");
         }
     }
 
 }
-
-
