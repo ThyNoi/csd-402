@@ -57,7 +57,7 @@ public class RockPaperScissors {
 
         
         // Display the choices as words 
-        System.out.println("\n --- Choice Results --- ");
+        System.out.println("\n --- Results --- ");
         System.out.println("Computer chose: " + computerWord);        
         System.out.println("You chose: " + userWord);  
 
@@ -78,6 +78,7 @@ public class RockPaperScissors {
         else {
             System.out.println("You lost!");
         }
+        input.close();
     }
 
 }
