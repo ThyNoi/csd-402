@@ -1,11 +1,11 @@
 /*
     Eric Sengvanhpheng
-    August 21, 2026
+    August 23, 2026
     CSD 402 Module 3.2
 
     Build a program that uses nested loops 
     to create a pyramid shape with incrementing numbers
-    up and down
+    up and down.
 
 */
 
@@ -14,7 +14,7 @@ public class Pyramid {
         
         int rows = 7;
         int width = 3; // Each number takes four spaces
-        int rightEdge = 42; // fixed position for @
+        int rightEdge = 42; // Fixed position for @
 
         for (int row = 1; row <= rows; row++) { // Outer loop
             
@@ -24,14 +24,14 @@ public class Pyramid {
             }
             
             // Numbers going up 
-            int num = 1; // create num, put 1 in it
+            int num = 1; // Create num, start at 1
             for (int i = 1; i <= row; i++) {
-                System.out.printf("%-" + width + "d", num); // for fixed width
-                num = num * 2; // double the number each time
+                System.out.printf("%-" + width + "d", num); // For fixed width
+                num = num * 2; // Double the number each time
             }
             
             // Numbers going down
-            num = num / 4; 
+            num = num / 4; // Reset calculation
             for (int i = 1; i <= row - 1; i++) {
                 System.out.printf("%-" + width + "d", num);
                 num = num / 2; 
