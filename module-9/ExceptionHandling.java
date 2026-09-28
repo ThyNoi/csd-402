@@ -1,3 +1,12 @@
+/*
+    Eric Sengvanhpheng
+    September 27, 2026
+    CSD 402 Module 9
+
+    Create an arraylist, Get input and utilize auto boxxing and unboxing.
+    Use try/catch to handle exceptions.
+ */
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,8 +24,6 @@ public class ExceptionHandling {
         list.add("BMW");
         list.add("Kia");
 
-        System.out.println(list);
-
         Scanner sc = new Scanner(System.in);
 
         int index = 0;
@@ -26,10 +33,20 @@ public class ExceptionHandling {
             index++;
         }
 
-        System.out.println("enter the index of a brand to see again: ");
-        String userInput = sc.nextLine();
-        System.out.println("you have entered index: " + userInput);
-
+        System.out.println("Enter the index of a brand to see again: ");
+        String userInput = sc.nextLine(); // Scanner reads the choice as text
+        System.out.println("You have entered index: " + userInput);
+        try {
+            Integer selectedIndex = Integer.parseInt(userInput);
+            // convert the text to a number so it can be used as a list index
+            System.out.println("Text converted to a number: " + selectedIndex);
+            System.out.println(list.get(selectedIndex));
+        }  catch (NumberFormatException e) {
+            System.out.println("Invalid input: Please enter a whole-number index");
+        }  catch (IndexOutOfBoundsException e) {
+            // this index is a number, but there's no item at that position
+            System.out.println("Exception thrown: Out of Bounds");
+        }
         sc.close();
     }
 }
